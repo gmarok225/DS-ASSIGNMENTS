@@ -8,7 +8,7 @@ int main(){
     cout << "Enter number of columns: ";
     cin >> col;
     int arr[50][50];
-// Input elements
+
     cout << "Enter elements of array:\n";
     for(i=0;i<row;i++){
         for(j=0;j<col;j++){
@@ -16,7 +16,7 @@ int main(){
             cin >> arr[i][j];
         }
     }
-// Display matrix
+
     cout << "Matrix:\n";
     for(i=0;i<row;i++){
         for(j=0;j<col;j++){
@@ -24,7 +24,7 @@ int main(){
         }
         cout << endl;
     }
-// Row sums
+
     cout << "Row sums:\n";
     for(i=0;i<row;i++){
         rsum=0;
@@ -33,7 +33,7 @@ int main(){
         }
         cout << "Row " << i + 1 << " sum = " << rsum << endl;
     }
-// Column sums
+
     cout << "\nColumn sums:\n";
     for(j=0;j<col;j++){
         csum=0;
@@ -44,4 +44,5 @@ int main(){
     }
     return 0;
 }
+
 
