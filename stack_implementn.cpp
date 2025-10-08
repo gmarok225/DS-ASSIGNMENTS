@@ -19,6 +19,8 @@ int main() {
         cin >> A[i];
     }
 
+
+
     // Find nearest smaller element for each element
     for (int i = 0; i < n; i++) {
         while (!st.empty() && st.top() >= A[i]) {
@@ -124,6 +126,8 @@ int main() {
 
 
 
+
+
 //next greater element
 
 #include <iostream>
@@ -194,53 +198,8 @@ int main() {
 
 
 
-//stack sorting / permutation check
 
-#include <iostream>
-#include <stack>
-#include <vector>
-#include <algorithm>
-using namespace std;
 
-int main() {
-    int n;
-    cout << "Enter size of array: ";
-    cin >> n;
-
-    vector<int> A(n), sortedA;
-    cout << "Enter elements: ";
-    for (int i = 0; i < n; i++) {
-        cin >> A[i];
-    }
-
-    sortedA = A;
-    sort(sortedA.begin(), sortedA.end());
-
-    stack<int> S;
-    int idx = 0;  // pointer to expected element in sorted array
-
-    for (int i = 0; i < n; i++) {
-        S.push(A[i]);
-        // Keep popping if top of stack is what we expect next
-        while (!S.empty() && S.top() == sortedA[idx]) {
-            S.pop();
-            idx++;
-        }
-    }
-
-    // Check remaining stack
-    while (!S.empty() && S.top() == sortedA[idx]) {
-        S.pop();
-        idx++;
-    }
-
-    if (idx == n)
-        cout << "YES — Possible to sort using stack.\n";
-    else
-        cout << "NO — Not possible.\n";
-
-    return 0;
-}
 
 
 
